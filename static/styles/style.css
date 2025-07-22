@@ -1,9 +1,84 @@
+body {
+    background-color: #283618;
+    color: #fefae0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+    max-width: 400px;
+    /* Adjust width as needed */
+    margin: 0 auto;
+    /* Centers horizontally */
+    padding: 20px;
+}
+
+
 h1 {
+    color: #fefae0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
     text-align: center;
 }
 
-body {
-    background-color: #283618;
+.submitButton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fefae0;
+    background: transparent;
+    display: block;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-items: center;
+}
+
+.submitButton:hover {
+    transform: scale(1.05);
+    background-color: #4a5a24;
+}
+
+.inputContainer {
+    position: relative;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.cityInput {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    padding-bottom: 2px;
+    margin: 0 auto;
+    border-bottom: #fefae0 1px solid;
+    color: #fefae0;
+    width: 75%;
+    outline: none;
+    text-align: center;
+}
+
+.inputLabel {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    color: #bcb8a4;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.cityInput:focus {
+    border-bottom-color: #dda15e;
+}
+
+.cityInput:focus+.inputLabel,
+.cityInput:not(:placeholder-shown)+.inputLabel {
+    transform: translateY(-25px) scale(0.8);
+    color: #dda15e;
+}
+
+.flex-container {
+    margin: 0 auto;
 }

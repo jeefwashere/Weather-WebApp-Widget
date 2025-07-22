@@ -9,8 +9,13 @@
 <body>
     <h1>City not found</h1>
     <form action="/weather">
-        <input type="text" name="city" id="city" placeholder="Enter a city">
-        <button type="submit">Submit</button>
+        <div class="flex-container">
+            <div class="inputContainer">
+                <input type="text" name="city" id="city" class="cityInput" placeholder=" ">
+                <label for="cityInput" class="inputLabel">Enter a city</label>
+            </div>
+            <button type="submit" class="submitButton">Search</button>
+        </div>
     </form>
 </body>
 </html>

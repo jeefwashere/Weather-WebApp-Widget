@@ -19,9 +19,6 @@ if __name__ == "__main__":
 
     city = input("\nPlease enter a city: ")
 
-    if not bool(city.strip()):
-        city = "Kitchener"
-
     weather_data = getCurrentWeather(city)
 
     print("\n")
