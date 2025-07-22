@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} Weather</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
 </head>
+
 <body>
-    <h1>{{title}}</h1>
-    <p>{{status}} and {{temp}} &deg;</p>
-    <p>Feels like {{feels_like}} &deg;C</p>
+    <h1>{{title}}, {{country}} <span class="fi fi-{{country|lower}}"></span></h1>
+
+    <div class="weatherInfo">
+        <div class="weatherStatus">
+            <p>{{status}}</p>
+            <img src="{{icon_url}}" alt="{{status}}" class="weatherIcon">
+        </div>
+        <div class="tempInfo">
+            <p>Current: {{temp}} &deg;C</p>
+            <p>L: {{temp_low}} &deg;C | H: {{temp_high}} &deg;C</p>
+            <p>Feels like {{feels_like}} &deg;C</p>
+        </div>
+    </div>
+
     <form action="/weather">
         <div class="flex-container">
             <div class="inputContainer">
@@ -20,4 +34,5 @@
         </div>
     </form>
 </body>
+
 </html>

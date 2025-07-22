@@ -1,17 +1,41 @@
 body {
-    background-color: #283618;
-    color: #fefae0;
+    background-color: #2f4550;
+    color: #f4f4f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.form-container {
-    max-width: 400px;
-    /* Adjust width as needed */
-    margin: 0 auto;
-    /* Centers horizontally */
-    padding: 20px;
+.weatherInfo {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin: 20px auto;
+    margin-bottom: 10px;
+    max-width: 75%;
+    padding: 0 20px;
 }
 
+.weatherInfo p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.weatherStatus {
+    padding: 10px;
+    padding-right: 20px;
+    border-right: #f4f4f9 solid 2px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.tempInfo {
+    padding: 10px;
+}
+
+.form-container {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 h1 {
     color: #fefae0;
@@ -22,7 +46,7 @@ h1 {
 
 .submitButton {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fefae0;
+    color: #f4f4f9;
     background: transparent;
     display: block;
     padding: 10px 20px;
@@ -35,7 +59,9 @@ h1 {
 
 .submitButton:hover {
     transform: scale(1.05);
-    background-color: #4a5a24;
+    background-color: #b8dbd9;
+    color: #586f7c;
+    font-weight: bold;
 }
 
 .inputContainer {
@@ -48,8 +74,8 @@ h1 {
     border: none;
     background: transparent;
     font-size: 1.5rem;
-    padding: 15px 0;
-    padding-bottom: 2px;
+    padding: 10px 0;
+    padding-bottom: 5px;
     margin: 0 auto;
     border-bottom: #fefae0 1px solid;
     color: #fefae0;
@@ -69,10 +95,12 @@ h1 {
     text-align: center;
 }
 
-.cityInput:focus {
+.cityInput:focus,
+.cityInput:hover {
     border-bottom-color: #dda15e;
 }
 
+.cityInput:hover+.inputLabel,
 .cityInput:focus+.inputLabel,
 .cityInput:not(:placeholder-shown)+.inputLabel {
     transform: translateY(-25px) scale(0.8);
