@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City not found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <h1>City not found</h1>
+    <form action="/weather">
+        <div class="flex-container">
+            <div class="inputContainer">
+                <input type="text" name="city" id="city" class="cityInput" placeholder=" ">
+                <label for="cityInput" class="inputLabel">Enter a city</label>
+            </div>
+            <button type="submit" class="submitButton">Search</button>
+        </div>
+    </form>
+</body>
+</html>
